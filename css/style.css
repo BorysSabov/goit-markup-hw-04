@@ -142,7 +142,8 @@ img {
   color: var(--primery-text-color);
 }
 
-.mail:hover .mail-icon {
+.mail:hover .mail-icon,
+.mail:focus .mail-icon {
   fill: var(--accent-bg-color);
 }
 .mail:hover,
@@ -150,7 +151,8 @@ img {
   color: var(--accent-text-color);
 }
 
-.phone:hover .phone-icon {
+.phone:hover .phone-icon,
+.phone:focus .phone-icon {
   fill: var(--accent-bg-color);
 }
 .phone:hover,
@@ -247,12 +249,13 @@ img {
 }
 .priorities-icon {
   display: flex;
-  padding: 25px 102px;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
   border-radius: 4px;
-  justify-content: center;
+
   background-color: rgb(245, 244, 250);
 }
 .antena-icon {
@@ -309,8 +312,6 @@ img {
 }
 
 .border {
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2); */
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-background-color);
 }
@@ -352,18 +353,21 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
 }
+
 .item-social:not(:last-child) {
   margin-right: 10px;
 }
-.item-social:hover {
-  background-color: var(--accent-bg-color);
-}
 
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
+}
 .instagram-icon {
   display: flex;
   justify-content: center;
@@ -371,8 +375,22 @@ img {
   height: 20px;
   fill: #afb1b8;
 }
-.instagram-icon:hover {
+.instagram:hover .instagram-icon,
+.instagram:focus .instagram-icon {
   fill: var(--primary-background-color);
+}
+.instagram:hover,
+.instagram:focus {
+  background-color: var(--accent-bg-color);
+}
+.twitter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
 }
 .twitter-icon {
   display: flex;
@@ -380,8 +398,22 @@ img {
   height: 20px;
   fill: #afb1b8;
 }
-.twitter-icon:hover {
+.twitter:hover .twitter-icon,
+.twitter:focus .twitter-icon {
   fill: var(--primary-background-color);
+}
+.twitter:hover,
+.twitter:focus {
+  background-color: var(--accent-bg-color);
+}
+.facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
 }
 .facebook-icon {
   display: flex;
@@ -389,8 +421,24 @@ img {
   height: 20px;
   fill: #afb1b8;
 }
-.facebook-icon:hover {
+
+.facebook:hover .facebook-icon,
+.facebook:focus .facebook-icon {
   fill: var(--primary-background-color);
+}
+.facebook:hover,
+.facebook:focus {
+  background-color: var(--accent-bg-color);
+}
+
+.linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-background-color);
 }
 .linkedin-icon {
   display: flex;
@@ -398,8 +446,13 @@ img {
   height: 20px;
   fill: #afb1b8;
 }
-.linkedin-icon:hover {
+.linkedin:hover .linkedin-icon,
+.linkedin:focus .linkedin-icon {
   fill: var(--primary-background-color);
+}
+.linkedin:hover,
+.linkedin:focus {
+  background-color: var(--accent-bg-color);
 }
 
 /* <!--////////////////////clients//////////////////////////Постоянные клиенты//////////// --> */
@@ -413,19 +466,21 @@ img {
 }
 .item-clients {
   display: flex;
-  min-width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  padding: 16px 32px;
 }
 .item-clients:not(:last-child) {
   margin-right: 30px;
 }
-.item-clients:hover {
-  border-color: var(--accent-text-color);
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 .icon {
+  display: flex;
   width: 106px;
   height: 60px;
   align-items: center;
@@ -433,8 +488,13 @@ img {
   fill: #afb1b8;
 }
 
-.icon:hover {
+.clients-link:hover .icon,
+.clients-link:focus .icon {
   fill: var(--accent-bg-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-bg-color);
 }
 /*////////////////////////  Footer-studio/ //////////////////////// Подвал//////////*/
 .footer-section {
@@ -502,13 +562,29 @@ img {
 }
 .footer-social-item {
   display: flex;
+  border-radius: 50%;
+}
+.footer-social-link {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.063);
+  fill: var(--primary-background-color);
+}
+.footer-social-link .instagram-icon {
+  fill: var(--primary-background-color);
+}
+.footer-social-link .twitter-icon {
+  fill: var(--primary-background-color);
+}
+.footer-social-link .facebook-icon {
+  fill: var(--primary-background-color);
+}
+.footer-social-link .linkedin-icon {
+  fill: var(--primary-background-color);
 }
 .footer-social-item:not(:last-child) {
   margin-right: 10px;
@@ -594,6 +670,8 @@ img {
   margin: 0;
 }
 .text-desc {
+  font-weight: 400;
+  color: var(--primery-text-color);
   font-size: 16px;
   line-height: 1.87;
 }
@@ -602,10 +680,15 @@ img {
   flex-wrap: wrap;
   margin: -15px;
 }
-.main-box .item:hover {
+
+.content-link {
+  display: block;
+  text-decoration: none;
+}
+.content-link:hover,
+.content-link:focus {
   box-shadow: 1px 4px 6px 0 #00000016, 0 4px 4px 0 #00000006,
     0 1px 1px 0 #00000012;
-  cursor: pointer;
 }
 .main-box .item {
   margin: 15px;
